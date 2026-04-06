@@ -29,11 +29,17 @@ This system is part of real-world applications developed and used under Nexora f
 - Gradle Build System
 
 ## 📷 Screenshots
+### Dashboard
+![Dashboard](./screenshots/Dashboard.jpeg)
 
-![Dashboard](screenshots/Dashboard.jpeg)
-![Rooms](screenshots/Rooms.jpeg)
-![Rent Ledger](screenshots/Rent_Ledger.jpeg)
-![Rent History](screenshots/Rent_History.jpeg)
+### Rooms
+![Rooms](./screenshots/Rooms.jpeg)
+
+### Rent Ledger
+![Rent Ledger](./screenshots/Rent_Ledger.jpeg)
+
+### Rent History
+![Rent History](./screenshots/Rent_History.jpeg)
 
 ## 📊 Use Cases
 - Property owners
