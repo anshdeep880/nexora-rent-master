@@ -1,27 +1,32 @@
 # Nexora Rent Master 🏠
 
-A property management and rent automation system designed to manage tenants, track rent payments, and streamline rental operations.
+A property management and rent automation system with SMS reminders and payment tracking, designed for real-world rental businesses.
 
 ## 🚀 Overview
-Rent Master helps property owners and small businesses efficiently manage rental operations by maintaining tenant records, tracking rent payments, and organizing financial data.
+Nexora Rent Master is built to help property owners and small rental businesses efficiently manage tenants, track rent payments, and automate communication through reminders and confirmations.
 
-This system is part of real-world applications developed under Nexora.
+This system is part of real-world applications developed and used under Nexora for managing rental operations.
 
 ## ⚙️ Features
-- Tenant management
-- Rent tracking system
-- Payment records
-- Room management
-- Simple dashboard interface
+- Tenant management system
+- Rent tracking and payment records
+- Room and occupancy management
+- Organized dashboard for monitoring rental data
+- Structured data handling for tenants and payments
 
 ## 🔔 Automation Features
 - Automatically sends SMS reminders to tenants on rent due dates
 - Sends payment confirmation messages after successful rent payment
-- Helps reduce manual follow-ups and improves payment tracking
+- Reduces manual follow-ups and improves payment efficiency
+
+## 🧩 System Design
+- Mobile-based interface for easy and fast management
+- Scalable structure for handling multiple tenants and properties
+- Designed for future AI-based automation and analytics integration
 
 ## 🛠 Tech Stack
 - Android (Java)
-- Gradle
+- Gradle Build System
 
 ## 📷 Screenshots
 
@@ -34,6 +39,7 @@ This system is part of real-world applications developed under Nexora.
 - Property owners
 - PG / Hostel management
 - Rental businesses
+- Small real estate operators
 
 ## 👨‍💻 Developer
 Anshdeep Singh  
