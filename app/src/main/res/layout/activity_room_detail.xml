@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <!-- Main Content -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_base">
+
+            <!-- Room Info Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_tenant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_lg"
+                app:cardBackgroundColor="@color/surface"
+                app:cardCornerRadius="@dimen/corner_radius_md"
+                app:cardElevation="@dimen/elevation_sm"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_lg">
+
+                    <!-- Rent Amount -->
+                    <TextView
+                        android:id="@+id/tv_room_rent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rent_label"
+                        android:textAppearance="@style/TextAppearance.RentMaster.Title"
+                        android:textColor="@color/primary"
+                        android:textStyle="bold"
+                        tools:text="Rent: $350/week" />
+
+                    <!-- Room Type -->
+                    <TextView
+                        android:id="@+id/tv_room_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_xs"
+                        android:textAppearance="@style/TextAppearance.RentMaster.Body"
+                        android:textColor="@color/secondary"
+                        tools:text="Master Bedroom" />
+
+                    <!-- Tenant Status -->
+                    <TextView
+                        android:id="@+id/tv_tenant_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_md"
+                        android:text="@string/no_tenant"
+                        android:textAppearance="@style/TextAppearance.RentMaster.BodyLarge"
+                        android:textColor="@color/onSurface" />
+
+                    <!-- Tenant Info -->
+                    <TextView
+                        android:id="@+id/tv_tenant_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_xs"
+                        android:textAppearance="@style/TextAppearance.RentMaster.Body"
+                        android:textColor="@color/onSurfaceVariant"
+                        android:visibility="gone"
+                        tools:text="Phone: 0412 345 678"
+                        tools:visibility="visible" />
+
+                    <!-- View Ledger Button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_room_ledger"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_marginTop="@dimen/spacing_base"
+                        android:text="@string/view_ledger"
+                        android:textSize="@dimen/text_body_large"
+                        app:cornerRadius="@dimen/corner_radius_md" />
+
+                    <!-- Vacate Tenant Button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_vacate_tenant"
+                        style="@style/Widget.Material3.Button.TonalButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_marginTop="@dimen/spacing_md"
+                        android:text="@string/vacate_tenant"
+                        android:textSize="@dimen/text_body_large"
+                        android:visibility="gone"
+                        app:cornerRadius="@dimen/corner_radius_md" />
+
+                    <!-- Assign Tenant Button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_assign_tenant"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_marginTop="@dimen/spacing_md"
+                        android:text="@string/assign_tenant"
+                        android:textSize="@dimen/text_body_large"
+                        app:cornerRadius="@dimen/corner_radius_md" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Rent History Section Header -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_md"
+                android:text="@string/rent_history"
+                android:textAppearance="@style/TextAppearance.RentMaster.Title"
+                android:textColor="@color/onBackground" />
+
+            <!-- Rent History List -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_rent_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false"
+                tools:itemCount="3"
+                tools:listitem="@layout/item_rent_record" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

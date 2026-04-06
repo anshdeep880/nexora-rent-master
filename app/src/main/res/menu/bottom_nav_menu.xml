@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_properties"
+        android:icon="@android:drawable/ic_menu_myplaces"
+        android:title="Properties" />
+    <item
+        android:id="@+id/nav_tenants"
+        android:icon="@android:drawable/ic_menu_view"
+        android:title="Tenants" />
+    <item
+        android:id="@+id/nav_landlord"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:title="Landlord" />
+    <item
+        android:id="@+id/nav_ledger"
+        android:icon="@android:drawable/ic_menu_agenda"
+        android:title="Ledger" />
+    <item
+        android:id="@+id/nav_reports"
+        android:icon="@drawable/ic_reports"
+        android:title="Reports" />
+</menu>

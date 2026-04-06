@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_base">
+
+            <!-- Header -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_lg"
+                android:text="@string/add_room_title"
+                android:textAppearance="@style/TextAppearance.RentMaster.Headline"
+                android:textColor="@color/onBackground" />
+
+            <!-- Room Number -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_base"
+                android:hint="Room Number / Alias"
+                app:boxCornerRadiusBottomEnd="@dimen/corner_radius_sm"
+                app:boxCornerRadiusBottomStart="@dimen/corner_radius_sm"
+                app:boxCornerRadiusTopEnd="@dimen/corner_radius_sm"
+                app:boxCornerRadiusTopStart="@dimen/corner_radius_sm">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_room_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Room Type Dropdown -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/room_type_layout"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_base"
+                android:hint="Room Type"
+                app:boxCornerRadiusBottomEnd="@dimen/corner_radius_sm"
+                app:boxCornerRadiusBottomStart="@dimen/corner_radius_sm"
+                app:boxCornerRadiusTopEnd="@dimen/corner_radius_sm"
+                app:boxCornerRadiusTopStart="@dimen/corner_radius_sm">
+
+                <AutoCompleteTextView
+                    android:id="@+id/room_type_dropdown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Weekly Rent -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_room_rent"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_base"
+                android:hint="@string/monthly_rent_hint"
+                app:boxCornerRadiusBottomEnd="@dimen/corner_radius_sm"
+                app:boxCornerRadiusBottomStart="@dimen/corner_radius_sm"
+                app:boxCornerRadiusTopEnd="@dimen/corner_radius_sm"
+                app:boxCornerRadiusTopStart="@dimen/corner_radius_sm"
+                app:prefixText="$"
+                app:endIconMode="custom"
+                app:endIconDrawable="@drawable/ic_calculator">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_room_rent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Security Deposit (Optional) -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_room_security_deposit"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_xl"
+                android:hint="Security Deposit (Optional)"
+                app:boxCornerRadiusBottomEnd="@dimen/corner_radius_sm"
+                app:boxCornerRadiusBottomStart="@dimen/corner_radius_sm"
+                app:boxCornerRadiusTopEnd="@dimen/corner_radius_sm"
+                app:boxCornerRadiusTopStart="@dimen/corner_radius_sm"
+                app:prefixText="$"
+                app:endIconMode="custom"
+                app:endIconDrawable="@drawable/ic_calculator">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_room_security_deposit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Save Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_save_room"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Save Room"
+                android:textSize="@dimen/text_body_large"
+                app:cornerRadius="@dimen/corner_radius_md" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

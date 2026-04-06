@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="8dp"
+    app:cardBackgroundColor="@color/transparent_surface"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="2dp"
+    app:strokeWidth="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tv_room_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Room 101"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-medium"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_tenant_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tenant: John Doe"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"
+            android:textColor="?attr/colorOnSurfaceVariant" />
+
+        <TextView
+            android:id="@+id/tv_outstanding_rent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Outstanding: $500.00"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/error" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

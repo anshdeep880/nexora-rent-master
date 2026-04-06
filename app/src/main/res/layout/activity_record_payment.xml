@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_base">
+
+            <!-- Header -->
+            <TextView
+                android:id="@+id/tv_payment_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Record Payment"
+                android:textAppearance="@style/TextAppearance.RentMaster.Headline"
+                android:textColor="@color/onBackground" />
+
+            <!-- Subtitle -->
+            <TextView
+                android:id="@+id/tv_payment_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_lg"
+                android:text="Paying for Month"
+                android:textAppearance="@style/TextAppearance.RentMaster.Body"
+                android:textColor="@color/onSurfaceVariant" />
+
+            <!-- Amount Paid -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_base"
+                android:hint="@string/amount_paid_hint"
+                app:boxCornerRadiusBottomEnd="@dimen/corner_radius_sm"
+                app:boxCornerRadiusBottomStart="@dimen/corner_radius_sm"
+                app:boxCornerRadiusTopEnd="@dimen/corner_radius_sm"
+                app:boxCornerRadiusTopStart="@dimen/corner_radius_sm"
+                app:prefixText="$"
+                app:endIconMode="custom"
+                app:endIconDrawable="@drawable/ic_calculator"
+                android:id="@+id/til_payment_amount">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_payment_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Payment Mode -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_base"
+                android:hint="Payment Mode (Cash/Bank)"
+                app:boxCornerRadiusBottomEnd="@dimen/corner_radius_sm"
+                app:boxCornerRadiusBottomStart="@dimen/corner_radius_sm"
+                app:boxCornerRadiusTopEnd="@dimen/corner_radius_sm"
+                app:boxCornerRadiusTopStart="@dimen/corner_radius_sm">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_payment_mode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Note/Reference -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_xl"
+                android:hint="Note/Reference"
+                app:boxCornerRadiusBottomEnd="@dimen/corner_radius_sm"
+                app:boxCornerRadiusBottomStart="@dimen/corner_radius_sm"
+                app:boxCornerRadiusTopEnd="@dimen/corner_radius_sm"
+                app:boxCornerRadiusTopStart="@dimen/corner_radius_sm">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_payment_reference"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Confirm Payment Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_record_payment"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="@dimen/spacing_md"
+                android:text="Confirm Payment"
+                android:textSize="@dimen/text_body_large"
+                app:cornerRadius="@dimen/corner_radius_md" />
+
+            <!-- Generate Receipt Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_generate_receipt"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Generate Receipt"
+                android:textSize="@dimen/text_body_large"
+                android:visibility="gone"
+                app:cornerRadius="@dimen/corner_radius_md" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

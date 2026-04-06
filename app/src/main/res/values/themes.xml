@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme -->
+    <style name="Theme.RentMaster" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Primary Brand Color -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/onPrimary</item>
+        <item name="colorPrimaryContainer">@color/primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/onPrimaryContainer</item>
+
+        <!-- Secondary Brand Color -->
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorOnSecondary">@color/onSecondary</item>
+        <item name="colorSecondaryContainer">@color/secondaryContainer</item>
+        <item name="colorOnSecondaryContainer">@color/onSecondaryContainer</item>
+
+        <!-- Tertiary Brand Color -->
+        <item name="colorTertiary">@color/tertiary</item>
+        <item name="colorOnTertiary">@color/onTertiary</item>
+        <item name="colorTertiaryContainer">@color/tertiaryContainer</item>
+        <item name="colorOnTertiaryContainer">@color/onTertiaryContainer</item>
+
+        <!-- Surface and Background -->
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/onSurface</item>
+        <item name="colorSurfaceVariant">@color/surfaceVariant</item>
+        <item name="colorOnSurfaceVariant">@color/onSurfaceVariant</item>
+        <item name="android:colorBackground">@color/background</item>
+        <item name="colorOnBackground">@color/onBackground</item>
+
+        <!-- Error -->
+        <item name="colorError">@color/error</item>
+        <item name="colorOnError">@color/onError</item>
+
+        <!-- Outline -->
+        <item name="colorOutline">@color/outline</item>
+        <item name="colorOutlineVariant">@color/outlineVariant</item>
+
+        <!-- Status Bar -->
+        <item name="android:statusBarColor">@color/surface</item>
+        <item name="android:windowLightStatusBar">true</item>
+        
+        <!-- Navigation Bar -->
+        <item name="android:navigationBarColor">@color/surface</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        
+        <!-- Window Background -->
+        <item name="android:windowBackground">@drawable/app_background</item>
+    </style>
+
+    <!-- Typography Styles -->
+    <style name="TextAppearance.RentMaster.DisplayLarge" parent="TextAppearance.Material3.DisplayLarge">
+        <item name="android:textSize">@dimen/text_display</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@color/onSurface</item>
+    </style>
+
+    <style name="TextAppearance.RentMaster.Headline" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="android:textSize">@dimen/text_headline</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@color/onSurface</item>
+    </style>
+
+    <style name="TextAppearance.RentMaster.Title" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textSize">@dimen/text_title</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@color/onSurface</item>
+    </style>
+
+    <style name="TextAppearance.RentMaster.BodyLarge" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textSize">@dimen/text_body_large</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/onSurface</item>
+    </style>
+
+    <style name="TextAppearance.RentMaster.Body" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textSize">@dimen/text_body</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/onSurface</item>
+    </style>
+
+    <style name="TextAppearance.RentMaster.Label" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:textSize">@dimen/text_label</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/onSurfaceVariant</item>
+    </style>
+
+    <!-- Shape Styles -->
+    <style name="ShapeAppearance.RentMaster.SmallComponent" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerSize">@dimen/corner_radius_sm</item>
+    </style>
+
+    <style name="ShapeAppearance.RentMaster.MediumComponent" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerSize">@dimen/corner_radius_md</item>
+    </style>
+
+    <style name="ShapeAppearance.RentMaster.LargeComponent" parent="ShapeAppearance.Material3.LargeComponent">
+        <item name="cornerSize">@dimen/corner_radius_lg</item>
+    </style>
+</resources>

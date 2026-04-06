@@ -1,0 +1,10 @@
+{
+  "name": "rent-master",
+  "version": "1.0.0",
+  "description": "Android Project Wrapper",
+  "scripts": {
+    "dev": ".\\gradlew.bat assembleDebug && echo [SUCCESS] APK created at: app\\build\\outputs\\apk\\debug\\app-debug.apk",
+    "install-android": "C:\\Users\\Anshdeep\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe install -r app\\build\\outputs\\apk\\debug\\app-debug.apk",
+    "run": "npm run dev && npm run install-android"
+  }
+}

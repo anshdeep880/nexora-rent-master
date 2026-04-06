@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/spacing_xs"
+    android:layout_marginHorizontal="@dimen/spacing_xs"
+    app:cardBackgroundColor="@color/surface"
+    app:cardCornerRadius="@dimen/corner_radius_md"
+    app:cardElevation="@dimen/elevation_sm"
+    app:strokeWidth="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/card_padding">
+
+        <TextView
+            android:id="@+id/tv_tenant_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.RentMaster.BodyLarge"
+            android:textColor="@color/onSurface"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tv_vacated_status"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="John Doe" />
+
+        <TextView
+            android:id="@+id/tv_vacated_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:text="(Vacated)"
+            android:textColor="#C62828"
+            android:textStyle="italic"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_rent_status"
+            app:layout_constraintEnd_toStartOf="@+id/tv_overpaid_tag"
+            app:layout_constraintTop_toTopOf="@+id/tv_rent_status"
+            tools:visibility="visible" />
+
+        <!-- Overpaid Chip -->
+        <com.google.android.material.chip.Chip
+            android:id="@+id/tv_overpaid_tag"
+            style="@style/Widget.Material3.Chip.Assist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:text="Overpaid"
+            android:textColor="@color/white"
+            app:chipBackgroundColor="#6200EE"
+            app:chipCornerRadius="@dimen/corner_radius_sm"
+            app:chipStrokeWidth="0dp"
+            android:textSize="@dimen/text_label"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_rent_status"
+            app:layout_constraintEnd_toStartOf="@+id/tv_rent_status"
+            app:layout_constraintTop_toTopOf="@+id/tv_rent_status"
+            tools:visibility="visible" />
+
+        <!-- Status Chip -->
+        <com.google.android.material.chip.Chip
+            android:id="@+id/tv_rent_status"
+            style="@style/Widget.Material3.Chip.Assist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:chipBackgroundColor="@color/success"
+            app:chipCornerRadius="@dimen/corner_radius_sm"
+            app:chipStrokeWidth="0dp"
+            android:textColor="@color/onSuccess"
+            android:textSize="@dimen/text_label"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Paid" />
+
+        <!-- Room Number -->
+        <TextView
+            android:id="@+id/tv_room_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xs"
+            android:textAppearance="@style/TextAppearance.RentMaster.Body"
+            android:textColor="@color/onSurfaceVariant"
+            app:layout_constraintEnd_toStartOf="@+id/tv_vacated_status"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tenant_name"
+            tools:text="Room: 101" />
+
+        <!-- Rent Period -->
+        <TextView
+            android:id="@+id/tv_rent_period"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_md"
+            android:textAppearance="@style/TextAppearance.RentMaster.Label"
+            android:textColor="@color/onSurfaceVariant"
+            app:layout_constraintEnd_toStartOf="@+id/tv_vacated_status"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_room_number"
+            tools:text="01 Jan 2026 - 07 Jan 2026" />
+
+        <!-- Rent Amount -->
+        <TextView
+            android:id="@+id/tv_rent_amount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xs"
+            android:textAppearance="@style/TextAppearance.RentMaster.BodyLarge"
+            android:textColor="@color/onSurface"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tv_vacated_status"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_rent_period"
+            tools:text="Due: $350.00 | Paid: $350.00" />
+
+        <!-- Edit Button -->
+        <ImageView
+            android:id="@+id/iv_edit"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="@dimen/spacing_xs"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Edit Record"
+            android:padding="4dp"
+            android:src="@drawable/ic_edit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_rent_status"
+            app:tint="@color/primary" />
+
+        <!-- Delete Button -->
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="@dimen/spacing_xs"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Delete Record"
+            android:padding="4dp"
+            android:src="@drawable/ic_delete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_edit"
+            app:tint="@color/error" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

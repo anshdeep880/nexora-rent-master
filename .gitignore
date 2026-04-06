@@ -1,0 +1,10 @@
+# Android/Gradle/Node.js Project Git ignore
+.gradle/
+.idea/
+build/
+*.iml
+local.properties
+node_modules/
+.DS_Store
+capture_recordings/
+*.log

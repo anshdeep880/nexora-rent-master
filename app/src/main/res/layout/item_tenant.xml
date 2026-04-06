@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/spacing_xs"
+    android:layout_marginHorizontal="@dimen/spacing_xs"
+    app:cardBackgroundColor="@color/surface"
+    app:cardCornerRadius="@dimen/corner_radius_md"
+    app:cardElevation="@dimen/elevation_sm"
+    app:strokeWidth="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/card_padding">
+
+        <!-- Tenant Name -->
+        <TextView
+            android:id="@+id/tv_tenant_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.RentMaster.Title"
+            android:textColor="@color/onSurface"
+            app:layout_constraintEnd_toStartOf="@+id/iv_edit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="John Doe" />
+
+        <!-- Phone Number -->
+        <TextView
+            android:id="@+id/tv_tenant_phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xs"
+            android:textAppearance="@style/TextAppearance.RentMaster.Body"
+            android:textColor="@color/onSurfaceVariant"
+            app:layout_constraintEnd_toStartOf="@+id/iv_edit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tenant_name"
+            tools:text="Phone: 0412 345 678" />
+
+        <!-- Rent Frequency -->
+        <TextView
+            android:id="@+id/tv_rent_frequency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_md"
+            android:textAppearance="@style/TextAppearance.RentMaster.Label"
+            android:textColor="@color/onSurfaceVariant"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tenant_phone"
+            tools:text="Pay: Weekly" />
+
+        <!-- Start Date -->
+        <TextView
+            android:id="@+id/tv_start_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_base"
+            android:textAppearance="@style/TextAppearance.RentMaster.Label"
+            android:textColor="@color/onSurfaceVariant"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_rent_frequency"
+            app:layout_constraintStart_toEndOf="@+id/tv_rent_frequency"
+            app:layout_constraintTop_toTopOf="@+id/tv_rent_frequency"
+            tools:text="Started: 01 Jan 2026" />
+
+        <!-- Status Chip -->
+        <com.google.android.material.chip.Chip
+            android:id="@+id/tv_room_info"
+            style="@style/Widget.Material3.Chip.Assist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_sm"
+            app:chipBackgroundColor="@color/secondaryContainer"
+            app:chipCornerRadius="@dimen/corner_radius_sm"
+            app:chipStrokeWidth="0dp"
+            android:textColor="@color/onSecondaryContainer"
+            android:textSize="@dimen/text_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_rent_frequency"
+            tools:text="Status: Active" />
+
+        <!-- Edit Button -->
+        <ImageView
+            android:id="@+id/iv_edit"
+            android:layout_width="@dimen/touch_target_icon"
+            android:layout_height="@dimen/touch_target_icon"
+            android:layout_marginEnd="@dimen/spacing_xs"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Edit Tenant"
+            android:padding="@dimen/spacing_sm"
+            android:src="@drawable/ic_edit"
+            app:layout_constraintEnd_toStartOf="@+id/iv_delete"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/primary" />
+
+        <!-- Delete Button -->
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="@dimen/touch_target_icon"
+            android:layout_height="@dimen/touch_target_icon"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Delete Tenant"
+            android:padding="@dimen/spacing_sm"
+            android:src="@drawable/ic_delete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/error" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

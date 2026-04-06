@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Brand Color - Soft Blue (Professional, Trustworthy) -->
+    <color name="primary">#5C6BC0</color>
+    <color name="onPrimary">#FFFFFF</color>
+    <color name="primaryContainer">#E8EAF6</color>
+    <color name="onPrimaryContainer">#1A237E</color>
+    
+    <!-- Secondary Brand Color - Soft Teal (Calm, Balanced) -->
+    <color name="secondary">#26A69A</color>
+    <color name="onSecondary">#FFFFFF</color>
+    <color name="secondaryContainer">#B2DFDB</color>
+    <color name="onSecondaryContainer">#004D40</color>
+    
+    <!-- Tertiary Color - Soft Amber (Warm Accent) -->
+    <color name="tertiary">#FFA726</color>
+    <color name="onTertiary">#FFFFFF</color>
+    <color name="tertiaryContainer">#FFE0B2</color>
+    <color name="onTertiaryContainer">#E65100</color>
+    
+    <!-- Surface Colors - Clean, Minimal -->
+    <color name="surface">#FFFFFF</color>
+    <color name="onSurface">#212121</color>
+    <color name="surfaceVariant">#F5F5F5</color>
+    <color name="onSurfaceVariant">#616161</color>
+    
+    <!-- Background -->
+    <color name="background">#FAFAFA</color>
+    <color name="onBackground">#212121</color>
+    
+    <!-- Status Colors -->
+    <color name="success">#66BB6A</color>
+    <color name="onSuccess">#FFFFFF</color>
+    <color name="error">#EF5350</color>
+    <color name="onError">#FFFFFF</color>
+    <color name="warning">#FFA726</color>
+    <color name="onWarning">#FFFFFF</color>
+    <color name="info">#42A5F5</color>
+    <color name="onInfo">#FFFFFF</color>
+    
+    <!-- Outline and Divider -->
+    <color name="outline">#E0E0E0</color>
+    <color name="outlineVariant">#EEEEEE</color>
+    
+    <!-- Legacy colors (for backward compatibility) -->
+    <color name="purple_200">#BBDEFB</color>
+    <color name="purple_500">#5C6BC0</color>
+    <color name="purple_700">#3949AB</color>
+    <color name="teal_200">#80CBC4</color>
+    <color name="teal_700">#00897B</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    
+    <!-- Transparent overlay -->
+    <color name="scrim">#80000000</color>
+    
+    <!-- Legacy/Backward Compatibility -->
+    <color name="transparent_surface">#F5F5F5</color>
+</resources>

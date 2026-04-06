@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/spacing_xs"
+    android:layout_marginHorizontal="@dimen/spacing_xs"
+    app:cardBackgroundColor="@color/surface"
+    app:cardCornerRadius="@dimen/corner_radius_md"
+    app:cardElevation="@dimen/elevation_sm"
+    app:strokeWidth="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/card_padding">
+
+        <!-- Property Name -->
+        <TextView
+            android:id="@+id/tv_property_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.RentMaster.Title"
+            android:textColor="@color/onSurface"
+            app:layout_constraintEnd_toStartOf="@+id/iv_edit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Sunset Apartments" />
+
+        <!-- Address -->
+        <TextView
+            android:id="@+id/tv_property_address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xs"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textAppearance="@style/TextAppearance.RentMaster.Body"
+            android:textColor="@color/onSurfaceVariant"
+            app:layout_constraintEnd_toStartOf="@+id/iv_edit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_property_name"
+            tools:text="123 Main Street, Sydney NSW 2000" />
+
+        <!-- Room Count Chip -->
+        <com.google.android.material.chip.Chip
+            android:id="@+id/tv_room_count"
+            style="@style/Widget.Material3.Chip.Assist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_md"
+            app:chipBackgroundColor="@color/primaryContainer"
+            app:chipCornerRadius="@dimen/corner_radius_sm"
+            app:chipStrokeWidth="0dp"
+            android:textColor="@color/onPrimaryContainer"
+            android:textSize="@dimen/text_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_property_address"
+            tools:text="5 Rooms" />
+
+        <!-- Edit Button -->
+        <ImageView
+            android:id="@+id/iv_edit"
+            android:layout_width="@dimen/touch_target_icon"
+            android:layout_height="@dimen/touch_target_icon"
+            android:layout_marginEnd="@dimen/spacing_xs"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Edit Property"
+            android:padding="@dimen/spacing_sm"
+            android:src="@drawable/ic_edit"
+            app:layout_constraintEnd_toStartOf="@+id/iv_delete"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/primary" />
+
+        <!-- Delete Button -->
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="@dimen/touch_target_icon"
+            android:layout_height="@dimen/touch_target_icon"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Delete Property"
+            android:padding="@dimen/spacing_sm"
+            android:src="@drawable/ic_delete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/error" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

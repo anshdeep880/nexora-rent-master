@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_base">
+
+            <!-- Header -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_lg"
+                android:text="Add New Property"
+                android:textAppearance="@style/TextAppearance.RentMaster.Headline"
+                android:textColor="@color/onBackground" />
+
+            <!-- Property Name -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_base"
+                android:hint="Property Name"
+                app:boxCornerRadiusBottomEnd="@dimen/corner_radius_sm"
+                app:boxCornerRadiusBottomStart="@dimen/corner_radius_sm"
+                app:boxCornerRadiusTopEnd="@dimen/corner_radius_sm"
+                app:boxCornerRadiusTopStart="@dimen/corner_radius_sm">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_property_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Full Address -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_base"
+                android:hint="Full Address"
+                app:boxCornerRadiusBottomEnd="@dimen/corner_radius_sm"
+                app:boxCornerRadiusBottomStart="@dimen/corner_radius_sm"
+                app:boxCornerRadiusTopEnd="@dimen/corner_radius_sm"
+                app:boxCornerRadiusTopStart="@dimen/corner_radius_sm">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_property_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPostalAddress|textMultiLine"
+                    android:maxLines="3" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Property Type -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_xl"
+                android:hint="Property Type (e.g., Building, House)"
+                app:boxCornerRadiusBottomEnd="@dimen/corner_radius_sm"
+                app:boxCornerRadiusBottomStart="@dimen/corner_radius_sm"
+                app:boxCornerRadiusTopEnd="@dimen/corner_radius_sm"
+                app:boxCornerRadiusTopStart="@dimen/corner_radius_sm">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_property_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Save Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_save_property"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Save Property"
+                android:textSize="@dimen/text_body_large"
+                app:cornerRadius="@dimen/corner_radius_md" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

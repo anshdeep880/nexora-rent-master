@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_base">
+
+            <!-- Header -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_lg"
+                android:text="@string/onboard_tenant"
+                android:textAppearance="@style/TextAppearance.RentMaster.Headline"
+                android:textColor="@color/onBackground" />
+
+            <!-- Full Name -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_base"
+                android:hint="@string/full_name"
+                app:boxCornerRadiusBottomEnd="@dimen/corner_radius_sm"
+                app:boxCornerRadiusBottomStart="@dimen/corner_radius_sm"
+                app:boxCornerRadiusTopEnd="@dimen/corner_radius_sm"
+                app:boxCornerRadiusTopStart="@dimen/corner_radius_sm">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_tenant_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName|textCapWords" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Contact Number -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_base"
+                android:hint="@string/contact_number"
+                app:boxCornerRadiusBottomEnd="@dimen/corner_radius_sm"
+                app:boxCornerRadiusBottomStart="@dimen/corner_radius_sm"
+                app:boxCornerRadiusTopEnd="@dimen/corner_radius_sm"
+                app:boxCornerRadiusTopStart="@dimen/corner_radius_sm">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_tenant_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Rent Frequency Dropdown -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/rent_frequency_layout"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_base"
+                android:hint="Rent Frequency"
+                app:boxCornerRadiusBottomEnd="@dimen/corner_radius_sm"
+                app:boxCornerRadiusBottomStart="@dimen/corner_radius_sm"
+                app:boxCornerRadiusTopEnd="@dimen/corner_radius_sm"
+                app:boxCornerRadiusTopStart="@dimen/corner_radius_sm">
+
+                <AutoCompleteTextView
+                    android:id="@+id/rent_frequency_dropdown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Start Date -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_base"
+                android:hint="Start Date"
+                app:boxCornerRadiusBottomEnd="@dimen/corner_radius_sm"
+                app:boxCornerRadiusBottomStart="@dimen/corner_radius_sm"
+                app:boxCornerRadiusTopEnd="@dimen/corner_radius_sm"
+                app:boxCornerRadiusTopStart="@dimen/corner_radius_sm">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_start_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Security Deposit -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_base"
+                android:hint="@string/security_deposit"
+                app:boxCornerRadiusBottomEnd="@dimen/corner_radius_sm"
+                app:boxCornerRadiusBottomStart="@dimen/corner_radius_sm"
+                app:boxCornerRadiusTopEnd="@dimen/corner_radius_sm"
+                app:boxCornerRadiusTopStart="@dimen/corner_radius_sm"
+                app:prefixText="$"
+                app:endIconMode="custom"
+                app:endIconDrawable="@drawable/ic_calculator"
+                android:id="@+id/til_security_deposit">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_security_deposit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- ID Reference / Notes -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_xl"
+                android:hint="@string/id_reference"
+                app:boxCornerRadiusBottomEnd="@dimen/corner_radius_sm"
+                app:boxCornerRadiusBottomStart="@dimen/corner_radius_sm"
+                app:boxCornerRadiusTopEnd="@dimen/corner_radius_sm"
+                app:boxCornerRadiusTopStart="@dimen/corner_radius_sm">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_tenant_notes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="3" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Save Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_save_tenant"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="@string/assign_tenant"
+                android:textSize="@dimen/text_body_large"
+                app:cornerRadius="@dimen/corner_radius_md" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rentmaster.app">
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher_new"
+        android:label="RentMaster"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.RentMaster">
+        <activity
+            android:name=".ui.LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.MainActivity" android:exported="false" />
+        <activity android:name=".ui.AddPropertyActivity" />
+        <activity android:name=".ui.PropertyDetailActivity" />
+        <activity android:name=".ui.AddRoomActivity" />
+        <activity android:name=".ui.RoomDetailActivity" />
+        <activity android:name=".ui.AddTenantActivity" />
+        <activity android:name=".ui.RecordPaymentActivity" />
+        <activity android:name=".ui.ExpenseActivity" />
+        <activity android:name=".ui.AddExpenseActivity" />
+        <activity android:name=".ui.TenantListActivity" />
+        <activity android:name=".ui.AllExpensesActivity" />
+        <activity android:name=".ui.RentLedgerActivity" />
+        <activity android:name=".ui.RoomLedgerActivity" />
+        <activity android:name=".ui.ReportActivity" />
+        <activity android:name=".ui.LandlordDetailActivity" />
+        
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <receiver android:name=".notification.RentDueReceiver" />
+    </application>
+
+</manifest>
